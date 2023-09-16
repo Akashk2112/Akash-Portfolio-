@@ -1,0 +1,551 @@
+:root{
+    scroll-behavior: smooth;
+    
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Source Sans 3', sans-serif;
+}
+
+html,body{
+    width: 100%;
+    height: 100%;
+}
+body{
+    width: 100%;
+    background-color: #0A192F;
+    color: #FFF;
+    
+}
+
+body::-webkit-scrollbar{
+    background-color: transparent;
+    width: 4px;
+
+}
+body::-webkit-scrollbar-thumb{
+    background-color:#48B4A3;
+    border-radius: 5px;
+}
+.cursor{
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    background-color: #fff;
+    position: fixed;
+    transition: all ease 0.2s;
+    z-index: 99999;
+    mix-blend-mode: difference;
+}
+
+/* -----------------------------------------------------------------------------------------Nav Bar--------------------------------------------------------------------------------------------- */
+
+#nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100px;
+    background-color: #001C30;
+    padding: 50px 50px;
+}
+#bground{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    border: 1px solid transparent;
+    border-right-color: #48B4A3;
+    border-bottom-color:#48B4A3;
+    animation: rotate 1s infinite;
+    
+}
+
+@keyframes rotate {
+    100%{
+        rotate: 360deg;
+     }
+}
+#bground1{
+    height: 60px;
+    width: 60px;
+    position: absolute;
+    left: 45px;
+    border-radius: 50%;
+    border: 1px solid transparent;
+    border-bottom-color:#48B4A3;
+    border-left-color:#48B4A3;
+    animation: rotate1 2s infinite;
+    
+}
+@keyframes rotate1 {
+    100%{
+        rotate: -360deg;
+    }
+}
+.Nav1{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: 25px;
+    color: #FFF;
+   
+}
+
+.Nav1 a{
+   text-decoration: none;
+    color: #FFF;
+}
+
+.Nav1 img{
+    height: 30px;
+    width: 30px;
+    position: absolute;
+    left: 60px;
+}
+.Nav2 ul li{
+    display: inline-block;
+    margin: 10px 30px;
+}
+
+.Nav2 ul li a{
+    color: #fff;
+    font-size: 20px;
+    text-decoration: none;
+    position: relative;
+}
+.Nav2 ul li a::after{
+    content: "";
+    width: 0;
+    height: 2px;
+    background-color: #48B4A3;
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    border-radius: 5px;
+    transition: all 0.5s;
+}
+
+.Nav2 ul li a:hover::after{
+    width: 100%;
+    color: #48B4A3;
+}
+
+#nav button{
+    background-color:transparent;
+    color: #48B4A3;
+    font-size: 15px;
+    padding: 6px;
+    border-radius: 5px;
+    border: 1px solid #48B4A3;
+}
+#nav i{
+    color: #48B4A3;
+    font-size: 25px;
+    display: none;
+}
+
+/* -------------------------------------------------------------------------------------------Home Page----------------------------------------------------------------------------------------- */
+
+#page1{
+    width: 100%;
+    text-align: center;
+    color: #FFF;
+    border: 1px solid transparent;    
+}
+
+#page1 h1{
+    font-size: 70px;
+    margin: 350px 0 0 ;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+}
+#page1 span{
+    color: #48B4A3;
+    font-family: 'Roboto slab', sans-serif;
+}
+#page1 h5{
+    font-weight: 300;
+    font-size: 30px;
+    letter-spacing: 10px;
+    
+}
+#page1 p {
+    width: 40%;
+    margin: 50px auto;
+    line-height: 1.5;
+    font-size: 20px;
+    font-weight: 300;
+}
+
+
+#page1 #home-btn button{
+    margin: 20px;
+    font-size: 20px;
+    padding: 10px 20px;
+    border-radius: 10px;
+    
+   
+}
+.contact-btn{
+    background-color: transparent;
+    color: #48B4A3;
+    border: 1px solid #48B4A3;
+}
+.cv-btn{
+    background-color:#48B4A3;
+    color: #fff;
+    border: 0;
+}
+
+/* ---------------------------------------------------------------------------------------About me --------------------------------------------------------------------------------------------- */
+
+#page2{
+    width: 100%;
+    border: 1px solid transparent;
+    text-align: center;
+}
+
+#page2 h1{
+    font-size: 40px;
+    margin: 150px 0 0 0;
+    color: #a0afe0;
+    text-transform: uppercase;
+}
+
+
+#about p{
+    font-size: 20px;
+}
+
+#about-me{
+    padding: 60px 170px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    
+}
+
+h2{
+    margin: 20px auto;
+    font-size: 27px;
+    font-weight: 400;
+    color: #48B4A3;
+    text-transform: uppercase;
+}
+#intro{
+    width: 40%;
+ }
+
+#intro img{
+    width: 200px;
+    height: 200px;
+    padding: 20px;
+}
+#intro p{
+    width: 100%;
+    margin: 0 auto;
+    line-height: 2;
+    font-weight: 400;
+}
+
+#skills{
+   width: 40%;
+}
+.skill-content{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.skills-list{
+    padding: 15px 30px;
+    border-radius: 8px;
+    border: 1px solid #a0afe0;
+    
+}
+
+/* ------------------------------------------------------------------------Project Section------------------------------------------------------------------------------------------------------ */
+
+#page3{
+    width: 100%;
+    text-align: center;
+    border: 1px solid transparent;
+}
+#page3 h1{
+    font-size: 40px;
+    margin: 150px 0 0 0;
+    color: #a0afe0;
+    text-transform: uppercase;
+}
+.projectHeading p {
+    font-size: 20px;
+}
+
+.projectPrev{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-wrap: wrap;
+}
+
+.projectPrev img{       
+    height: 300px;
+    width: 400px;
+    border-radius: 10px;
+    margin: 150px;
+}
+
+.projectContent{
+    width: 50%;
+    line-height: 2;
+}
+
+.projectContent p{
+    width: 40%;
+    margin: auto;
+}
+.projectContent button{
+    margin: 10px 0;
+    background-color:transparent;
+    color: #48B4A3;
+    font-size: 20px;
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: 1px solid #48B4A3;
+}
+
+.projectHeading h3{
+    color: #279EFF;
+    font-weight: 200;
+}
+
+.projectContent h3{
+    color: #279EFF;
+    font-size: 20px;
+    font-weight: 300;
+}
+
+/* -------------------------------------------------------------------------------Contact Section----------------------------------------------------------------------------------------------- */
+
+#page4{
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    border: 1px solid transparent;
+}
+#page4 h1{
+    margin: 150px 0 0 0;
+    color: #a0afe0;
+}
+.contactForm{
+    margin: 0 auto;
+    padding: 50px;
+    width: 45%;
+    height: 800px;
+}
+form{
+    height: 100%;
+    text-align: left;
+    padding: 20px;
+ 
+}
+
+.contactForm h3{
+    color: #48B4A3;
+}
+.input{
+    border-radius:10px;
+    border: none;
+    padding: 20px ;
+    margin: 20px 0;
+    width: 100%;
+    height: 100%;
+}
+form #confirmation{
+    display: block;
+    font-size: 17px;
+    color: #61b752;
+    margin-top: -15px;
+}
+form button{
+    margin: 10px 0;
+    background-color:#48B4A3;
+    color: #fff;
+    font-size: 20px;
+    padding: 10px 30px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+/* --------------------------------------------------------------------------Footer Section------------------------------------------------------------------------------------------------------*/
+
+footer{
+    width: 100%;
+    height: 200px;
+    background: #000;
+    text-align: center;
+    padding: 60px;
+    
+}
+
+footer .socialIcon a{
+    margin:50px;
+    text-decoration: none;
+    font-size: 40px;
+    color: #fff;
+    transition: all ease 0.5s;
+}
+
+footer p{
+    margin-top: 40px;
+     
+ }
+
+footer p a{
+    color: #279EFF;
+    text-decoration: none;
+}
+
+/* ----------------------------------------------------------------------------------------Responsive Section ---------------------------------------------------------------------------------- */
+
+@media only screen and (max-width:1200px) {
+    .Nav2 ul li{
+       margin: 0 20px;
+    }
+    
+    #page1{
+        height: 95vh;
+    }
+    #page1 p{
+        margin: 10px auto;
+        width: 70%;
+        line-height: 1.2;
+    }
+    #about-me{
+        margin-top: 50px;
+        width: 100%;
+        
+    }
+
+    .projectPrev img {
+        height: 400px;
+        width: 500px;
+        border-radius: 10px;
+        margin: 80px;
+    }
+    .projectContent {
+        width: 100%;
+    }   
+    .projectContent p {
+        width: 70%;
+        font-size: 18px;
+        margin: auto;
+    }     
+  
+    .contactForm{
+        width: 100%;
+    }
+    footer{
+        height: 200px;
+        padding: 60px;
+        align-items: center;
+        position: relative;
+    }
+    footer p{
+       margin-top: 25px;
+        
+    }
+    .cursor{
+        display: none;
+    }
+
+}
+
+
+@media only screen and (max-width:700px){
+   
+    #nav i{
+        display: block;
+        font-size: 35px;
+    }
+    .Nav2 ul{
+        display:none;
+    }
+   
+    .Nav2 ul.nav_List{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: 100px;
+        left: 0;
+        width: 100%;
+        gap: 30px;
+        background-color:#001C30;
+    }
+ 
+    #home h1{
+        font-size: 50px;
+        margin-top: 200px;
+        margin-left: 20px;
+        width: 100%;
+    }
+    #home h5{
+        padding: 10px 0;
+        margin-left: 25px;
+        letter-spacing: 5px;
+    }
+    #about-me{
+        padding: 0;
+    }
+ 
+    #intro{
+        width: 100%;
+     }
+     #intro img{
+        height: 300px;
+        width: 300px;
+     }
+     #intro p{
+        margin-bottom: 50px;
+        width: 100%;
+        line-height: 1.5;
+        font-size: 20px;
+        font-weight: 400;
+    }
+    #skills{
+        width: 100%;
+    } 
+    .skill-content{
+        justify-content: center;
+    }
+    .projectPrev img{
+        height: 100%;
+        width: 90%;
+        border-radius: 10px;
+        margin: 100px;
+    }
+    .contactForm{
+        padding: 0;
+    }
+    footer {
+        width: 108%;
+        height: 150px;
+        padding: 40px;
+    }
+    footer p{
+        margin: 0;
+    }
+    footer .socialIcon a{
+        margin: 30px;
+        font-size: 40px;
+        padding: 0px;
+    }
+}
